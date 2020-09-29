@@ -1,7 +1,7 @@
 const express = require('express');
 const { graphqlHTTP } = require('express-graphql');
 const { buildSchema } = require('graphql');
-const costumerJson = require('./data1to2.json')
+const costumerJson = require('./dataJoin1To9.json')
 
 // Construct a schema, using GraphQL schema language
 const schema = buildSchema(`
