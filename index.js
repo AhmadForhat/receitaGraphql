@@ -1,7 +1,10 @@
 const express = require('express');
 const { graphqlHTTP } = require('express-graphql');
 const { buildSchema } = require('graphql');
-const costumerJson = require('./dataJoin1To20.json')
+const costumerJson1 = require('./data201.json')
+const costumerJson2 = require('./data202.json')
+const costumerJson3 = require('./data203.json')
+const costumerJson4 = require('./data204.json')
 
 // Construct a schema, using GraphQL schema language
 const schema = buildSchema(`
@@ -27,7 +30,7 @@ const schema = buildSchema(`
   }
 `);
 
-const costumersData = costumerJson.data
+const costumersData = [...costumerJson1.data, ...costumerJson2.data, ...costumerJson3.data, ...costumerJson4.data]
 
 const getCostumers = (args) => {
     if(args.municipio){
